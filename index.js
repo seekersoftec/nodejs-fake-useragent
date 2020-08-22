@@ -1,29 +1,30 @@
-const scrapUserAgentString = require("./lib/scraper");
-const { getRandomStr } = require("./lib/tools");
+const scrapUserAgentString = require("./lib/scraper/scraper");
+const { genRandomStr } = require("./lib/tools");
+
+process.env.cache = true;
 
 scrapUserAgentString({
-  enableCache: true,
+  enableCache: process.env.cache,
   cacheName: "page_links_cache",
   UserAgentStringUrl:
     "http://www.useragentstring.com/pages/useragentstring.php",
 })
   .then((linkData) => {
     let browserList = ["chrome", "opera", "firefox", "edge"]; // default browser list
-    let UAName = getRandomStr(browserList);
+    let UAName = genRandomStr(browserList);
     //
     //
     if (UAName != "") {
       linkData.forEach((data) => {
         if (data.linkName.toLowerCase() == UAName.toLowerCase()) {
-          // console.log(data);
           //
           scrapUserAgentString({
-            enableCache: true,
+            enableCache: process.env.cache,
             cacheName: UAName + "_UA_cache",
             UserAgentStringUrl: "http://www.useragentstring.com" + data.link,
           })
             .then((UAstrings) => {
-              console.log(getRandomStr(UAstrings));
+              console.log(genRandomStr(UAstrings));
             })
             .catch((error) => {
               console.error(error);
