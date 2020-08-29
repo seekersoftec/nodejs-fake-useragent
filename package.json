@@ -1,7 +1,7 @@
 {
   "name": "fake-useragent",
   "version": "1.0.0",
-  "description": "",
+  "description": "fake user agents for nodejs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
