@@ -1,3 +1,12 @@
-const ua =  require("./index");
+const UserAgent = require("./index");
 
-console.log(ua)
+//
+//
+async function doSomething() {
+  // let browserList = ["chrome", "opera"];
+  let uas = await UserAgent("safari");
+    console.log(uas);
+//   return uas;
+}
+
+doSomething()

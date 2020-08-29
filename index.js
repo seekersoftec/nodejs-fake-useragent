@@ -1,4 +1,3 @@
-const { isEmpty, isArray, startCase } = require("lodash");
 const UserAgentScraper = require("./lib/scraper/scraper");
 const { genRandomStr } = require("./lib/tools");
 //
@@ -24,9 +23,8 @@ async function UserAgent(
     }
   });
   //
-  // console.log(selectedBrowsers);
   let selectedBrowser = genRandomStr(selectedBrowsers);
-  console.log(selectedBrowser);
+  //
   let UAString = new UserAgentScraper({
     enableCache: process.env.cache,
     cacheName: selectedBrowser.linkName.toLowerCase() + "_UA_cache",
@@ -36,16 +34,4 @@ async function UserAgent(
   return genRandomStr(UAStringDataList);
 }
 
-//
-//
-async function ua() {
-  // let browserList = ["chrome", "opera"];
-  let uas = await UserAgent("safari");
-
-  console.log(uas);
-  // return uas;
-}
-
-ua();
-
-// module.exports = ua;
+module.exports = UserAgent;
