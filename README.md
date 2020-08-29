@@ -4,7 +4,7 @@
 <p>
 A port of python's <a href="https://github.com/hellysmile/fake-useragent">fake-user-agent library</a>
 
-- grabs up to date useragent from useragentstring.com
+- grabs up to date useragent from <a href="useragentstring.com">useragentstring</a>
 
 Get the most used browser(s) from <a href="https://www.w3schools.com/browsers/default.asp">w3schools</a> 
 
