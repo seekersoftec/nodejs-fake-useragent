@@ -7,12 +7,16 @@
     "test": "echo \"Error: no test specified\"",
     "start": "node index.js"
   },
-  "keywords": [],
+  "keywords": ["useragent","agent","ua"],
   "author": "seekersoftec",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.20.0",
     "cheerio": "^1.0.0-rc.3",
     "lodash": "^4.17.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seekersoftec/nodejs-fake-useragent"
   }
 }
