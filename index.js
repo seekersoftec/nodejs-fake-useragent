@@ -4,18 +4,13 @@ const { genRandomStr } = require("./lib/tools");
 // 
 process.env.cache = true;
 //
-const { genRandomStr } = require("../tools");
-class UserAgent {
-  constructor(browserList = [
+async function UserAgent(browserList = [
     "chrome",
     "edge",
     "firefox",
     "safari",
     "opera",
   ]) {
-    this.browserList = browserList;
-  }
-  get UserAgent() {
     //
     let selectedBrowsers = [];
     //
@@ -51,16 +46,15 @@ class UserAgent {
       UAStrings.push(genRandomStr(UAStringData));
     });
     //
-    // return UAStrings;
-    console.log(UAStrings);
+    return UAStrings;
+    // console.log(UAStrings);
   }
 
-}
 
 //
 // 
 //
 let browserList = ["chrome", "opera"];
-let ua = new UserAgent(browserList);
+let ua = UserAgent(browserList);
 
 console.log(ua);
