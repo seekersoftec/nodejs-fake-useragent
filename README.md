@@ -6,7 +6,7 @@ A port of python's <a href="https://github.com/hellysmile/fake-useragent">fake-u
 
 - grabs up to date useragent from useragentstring.com
 
-get the most used browser(s) from w3schools: https://www.w3schools.com/browsers/default.asp
+Get the most used browser(s) from <a href="https://www.w3schools.com/browsers/default.asp">w3schools</a> 
 
 </p>
 
