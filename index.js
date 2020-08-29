@@ -13,7 +13,6 @@ async function UserAgent(
   let pageLinks = new UserAgentScraper({
     enableCache: process.env.cache,
     cacheName: "page_links_cache",
-    onUpdate: false,
     userAgentStringUrl:
       "http://www.useragentstring.com/pages/useragentstring.php",
   });
@@ -31,8 +30,7 @@ async function UserAgent(
   let UAString = new UserAgentScraper({
     enableCache: process.env.cache,
     cacheName: selectedBrowser.linkName.toLowerCase() + "_UA_cache",
-    onUpdate: false,
-    UserAgentStringUrl: "http://www.useragentstring.com" + selectedBrowser.link,
+    userAgentStringUrl: "http://www.useragentstring.com" + selectedBrowser.link,
   });
   let UAStringDataList = await UAString.scraper();
   return genRandomStr(UAStringDataList);
@@ -42,7 +40,7 @@ async function UserAgent(
 //
 async function ua() {
   // let browserList = ["chrome", "opera"];
-  let uas = await UserAgent();
+  let uas = await UserAgent("safari");
 
   console.log(uas);
   // return uas;
