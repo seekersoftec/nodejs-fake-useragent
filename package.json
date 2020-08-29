@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\"",
     "start": "node index.js"
   },
-  "keywords": ["useragent","agent","ua"],
+  "keywords": [
+    "fake-user-agent",
+    "useragent",
+    "agent"
+  ],
   "author": "seekersoftec",
   "license": "MIT",
   "dependencies": {
