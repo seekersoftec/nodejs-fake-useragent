@@ -2,7 +2,7 @@
 <br/>
 <br/>
 <p>
-A port of python's fake-user-agent library
+A port of python's <a href="https://github.com/hellysmile/fake-useragent">fake-user-agent library</a>
 
 - grabs up to date useragent from useragentstring.com
 
