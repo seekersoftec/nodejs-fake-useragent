@@ -17,6 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seekersoftec/nodejs-fake-useragent"
-  }
+    "url": "git+https://github.com/seekersoftec/nodejs-fake-useragent.git"
+  },
+  "homepage": "https://github.com/seekersoftec/nodejs-fake-useragent"
 }
